@@ -19,9 +19,10 @@
         
         $.when(pt).done(function(patient) {
             if (smart.hasOwnProperty('userId')) {
-              alert(smart.userId);
+              console.log(smart.userId);
+	      alert(smart.userId);
               alert(smart.tokenResponse.access_token);
-              var settings = {
+/*              var settings = {
                   "async": true,
                   "url": smart.userId,
                   //"url": "https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724069",
@@ -48,10 +49,11 @@
   
                 patient.dz = response.id;
                 patient.sn = sn;
-                alert(JSON.stringify(patient));
+		})
+*/              alert(JSON.stringify(patient));
                 alert(JSON.stringify(patient.resourceType));
                 ret.resolve(patient);
-              })
+ /*             })*/
             } else {
               onError();
             }
