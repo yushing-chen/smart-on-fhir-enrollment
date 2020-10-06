@@ -62,7 +62,7 @@
         onError();
       }
     }
-    alert("version Rose-10-ES0914-2");
+    alert("version Rose-10-ES1006-3");
     FHIR.oauth2.ready(onReady, onError);
     return ret.promise();
   };
