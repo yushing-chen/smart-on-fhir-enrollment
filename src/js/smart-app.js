@@ -62,7 +62,7 @@
         onError();
       }
     }
-    alert("version Rose-10-ES1006-3");
+    alert("version Rose-10-ES1006-5");
     FHIR.oauth2.ready(onReady, onError);
     return ret.promise();
   };
@@ -186,7 +186,7 @@
 //https://vaausappesr801.aac.va.gov:7401/es-rs/ratingapp/postform         
 var es_dataUrl = "edipi=" + edipi + "&" + "icn=" + icn + "&" + "name=" + nm + "&" + "dob=" + dobStr + "&" +"sex=" + gender + "&" + "fin=" + fin + "&" + "mrn=" + mrn  ;
 //var es_url = "https://usvadceapp.lcahncrls.net/?data="+ es_dataUrl;
-var es_url = "https://vaww.esrstage1httpsa.aac.va.gov/es/?data="+ es_dataUrl;	  
+var es_url = "https://vaww.esrstage1a.aac.va.gov/es/?data="+ es_dataUrl;	  
 
       console.log(es_url);
       alert(es_url);
