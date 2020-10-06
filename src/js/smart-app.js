@@ -22,38 +22,8 @@
               console.log(smart.userId);
 	      alert(smart.userId);
               alert(smart.tokenResponse.access_token);
-/*              var settings = {
-                  "async": true,
-                  "url": smart.userId,
-                  //"url": "https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724069",
-                  "method": "GET",
-                  "headers": {
-                      "Content-Type": "application/json",
-                      "Accept": "application/json",
-                      "Authorization": "Bearer " + smart.tokenResponse.access_token
-                  },
-              }
-
-              $.ajax(settings).done(function (response) {
-                console.log("prationer ajax call ");
-                console.log(response);
-                alert(JSON.stringify(response));
-                if (typeof response.name[0] !== 'undefined') {
-                  var lName = response.name[0].family;
-                  patient.l5 = lName.substring(0, 5);
-                }
-                if (typeof response.identifier[0] !== 'undefined') {
-                  alert(response.identifier[0].value);
-                  var sn = response.identifier[0].value;
-                }
-  
-                patient.dz = response.id;
-                patient.sn = sn;
-		})
-*/              alert(JSON.stringify(patient));
-                alert(JSON.stringify(patient.resourceType));
+                alert(JSON.stringify(patient));
                 ret.resolve(patient);
- /*             })*/
             } else {
               onError();
             }
@@ -67,24 +37,6 @@
     return ret.promise();
   };
 
-  function getPractitioner(patient) {
-      console.log(patient.userId);
-      console.log(patient.tokenResponse.id_token);
-      var settings = {
-          "async": true,
-          "url": patient.useId,
-          "method": "GET",
-          "headers": {
-              "Content-Type": "application/json",
-              "Accept": "application/json",
-              "Authorization": "Bearer " + patient.tokenResponse.id_token
-          },
-      }
-
-      $.ajax(settings).done(function (response) {
-          console.log(response)
-      })
-  }
 //function getPatientEDIPI(patient)
  function getPatientEDIPI(patient) {
       const dsvDodIdentifierSystemName = 'urn:oid:2.16.840.1.113883.3.42.10001.100001.12';
@@ -186,7 +138,7 @@
 //https://vaausappesr801.aac.va.gov:7401/es-rs/ratingapp/postform         
 var es_dataUrl = "edipi=" + edipi + "&" + "icn=" + icn + "&" + "name=" + nm + "&" + "dob=" + dobStr + "&" +"sex=" + gender + "&" + "fin=" + fin + "&" + "mrn=" + mrn  ;
 //var es_url = "https://usvadceapp.lcahncrls.net/?data="+ es_dataUrl;
-var es_url = "https://vaww.esrstage1a.aac.va.gov/es/?data="+ es_dataUrl;	  
+var es_url = "https://vaww.esrstage1a.aac.va.gov/es-rs/ratingapp/?data="+ es_dataUrl;	  
 
       console.log(es_url);
       alert(es_url);
