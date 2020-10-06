@@ -22,7 +22,7 @@
               console.log(smart.userId);
 	      alert(smart.userId);
               alert(smart.tokenResponse.access_token);
-                alert(JSON.stringify(patient));
+              alert(smart.patient);
                 ret.resolve(patient);
             } else {
               onError();
