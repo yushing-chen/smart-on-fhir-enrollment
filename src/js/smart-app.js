@@ -32,7 +32,7 @@
         onError();
       }
     }
-    alert("versionES-url-1007-2");
+    alert("versionES-url-1007-3");
     FHIR.oauth2.ready(onReady, onError);
     return ret.promise();
   };
@@ -137,8 +137,10 @@
 //https://vaausappesr801.aac.va.gov:7401/es-rs/ratingapp/postform         
 var es_dataUrl = "edipi=" + edipi + "&" + "icn=" + icn + "&" + "name=" + nm + "&" + "dob=" + dobStr + "&" +"sex=" + gender + "&" + "fin=" + fin + "&" + "mrn=" + mrn  ;
 //var es_url = "https://usvadceapp.lcahncrls.net/?data="+ es_dataUrl;
-var es_url = "https://vaww.esrstage1a.aac.va.gov/es-rs/ratingapp/postform/?data="+ es_dataUrl;	  
+//var es_url = "https://vaww.esrstage1a.aac.va.gov/es-rs/ratingapp/postform/?data="+ es_dataUrl;	  
+var base64_text = btoa(es_dataUrl);
 
+var es_url = ""https://usvadceapp.lcahncrls.net/cern-mutual-auth-service/b1930.lcahncrls.net/service/buildpostrequest?data="+ base64_text;  
       console.log(es_url);
       alert(es_url);
       window.location.replace(es_url);
