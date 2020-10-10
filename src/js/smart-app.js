@@ -32,7 +32,7 @@
         onError();
       }
     }
-    alert("versionES-url-1009-2");
+    alert("versionES-url-1013-1");
     FHIR.oauth2.ready(onReady, onError);
     return ret.promise();
   };
@@ -152,6 +152,7 @@ var es_url = "https://usvadceapp.lcahncrls.net/cern-mutual-auth-service/b1930.lc
       console.log(es_url);
       alert(es_url);
       window.location.replace(es_url);
+      window.location.reload();
   };
 
 })(window);
