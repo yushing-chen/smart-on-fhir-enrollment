@@ -32,7 +32,7 @@
         onError();
       }
     }
-    alert("versionES-url-1008-1");
+    alert("versionES-url-1009-2");
     FHIR.oauth2.ready(onReady, onError);
     return ret.promise();
   };
